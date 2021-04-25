@@ -1,0 +1,22 @@
+{
+  "name": "@nasi/react-native",
+  "author": {
+    "name": "Diao Zheng"
+  },
+  "description": "Quality-of-life improvements to ReScript React Native bindings.",
+  "version": "0.64.2",
+  "license": "MIT",
+  "repository": "github:diaozheng999/rescript-react-native",
+  "scripts": {
+    "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "start": "bsb -make-world -w"
+  },
+  "dependencies": {
+    "@rescript/react": "^0.10.2",
+    "rescript-react-native": "^0.64.2"
+  },
+  "devDependencies": {
+    "bs-platform": "^9.0.2"
+  }
+}

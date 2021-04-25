@@ -1,0 +1,19 @@
+{
+  "name": "@nasi/react-native",
+  "namespace": "react-native-2",
+  "sources": {
+    "dir" : "src",
+    "subdirs" : true
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": false,
+    "suffix": ".bs.js"
+  },
+  "bs-dependencies": ["@rescript/react", "rescript-react-native"],
+  "warnings": {
+    "number": "-44",
+    "error" : "+101"
+  },
+  "ppx-flags": []
+}

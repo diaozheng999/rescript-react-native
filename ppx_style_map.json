@@ -1,0 +1,22 @@
+{
+  "flexStart": "flex-start",
+  "flexEnd": "flex-end",
+  "spaceBetween": "space-between",
+  "spaceAround": "space-around",
+  "_end": "end",
+  "rowReverse": "row-reverse",
+  "columnReverse": "column-reverse",
+  "spaceEvenly": "space-evenly",
+  "inherit_": "inherit",
+  "_100": "100",
+  "_200": "200",
+  "_300": "300",
+  "_400": "400",
+  "_500": "500",
+  "_600": "600",
+  "_700": "700",
+  "_800": "800",
+  "_900": "900",
+  "lineThrough": "line-through",
+  "underlineLineThrough": "underline line-through"
+}
