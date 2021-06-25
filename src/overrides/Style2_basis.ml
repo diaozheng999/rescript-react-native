@@ -20,7 +20,7 @@ module type Sig = sig
 
   val compile : 'a style_prop list -> 'a style
 
-  val compose : 'a style -> 'a style -> 'a style
+  external compose : 'a style -> 'a style -> 'a style = "Array" [@@bs.val]
 
   val composeWith : ?base:'a style -> 'a style -> 'a style
 
@@ -29,7 +29,7 @@ module type Sig = sig
   val pct : float -> ReactNative.Style.size
 
   module Infix : sig
-    val ( ^ ) : 'a style -> 'a style -> 'a style
+    external ( ^ ) : 'a style -> 'a style -> 'a style = "Array" [@@bs.val]
   end
 end
 
@@ -65,11 +65,11 @@ let compile (l : 'a style_prop list) : 'a t =
   let () = Js.List.iter (fun [@bs] f -> f abs_style |> ignore) l in
   asRNStyle abs_style
 
-let compose a b = [| a; b |] |> ofArray
+external compose : 'a style -> 'a style -> 'a style = "Array" [@@bs.val]
 
 let composeWith ?base style =
   match base with Some base -> compose base style | None -> style
 
 module Infix = struct
-  let ( ^ ) a b = compose a b
+  external ( ^ ) : 'a style -> 'a style -> 'a style = "Array" [@@bs.val]
 end
