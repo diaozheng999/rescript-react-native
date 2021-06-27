@@ -27,7 +27,7 @@ external make: (
   ~onProgress: Image.progressEvent => unit=?,
   ~progressiveRenderingEnabled: bool=?,
   ~resizeMethod: Image.resizeMethod=?,
-  ~resizeMode: Style.resizeMode=?,
+  ~resizeMode: ReactNative.Style.resizeMode=?,
   ~source: Image.Source.t,
   ~style: Style2.t<[< Style2.viewStyle]>=?,
   ~testID: string=?,

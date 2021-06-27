@@ -16,7 +16,7 @@ external make: (
   mode=?,
   ~prompt: string=?,
   ~itemStyle: // iOS only
-  Style.t=?,
+  ReactNative.Style.t=?,
   ~accessibilityActions: // View props 0.63.0
   array<Accessibility.actionInfo>=?,
   ~accessibilityElementsHidden: bool=?,

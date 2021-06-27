@@ -40,7 +40,7 @@ external make: (
   ~onPressIn: Event.pressEvent => unit=?,
   ~onPressOut: Event.pressEvent => unit=?,
   ~pressRetentionOffset: View.edgeInsets=?,
-  ~style: interactionState => Style.t=?,
+  ~style: interactionState => ReactNative.Style.t=?,
   ~testID: string=?,
   ~testOnly_pressed: bool=?,
   ~rel: // React Native Web Props
