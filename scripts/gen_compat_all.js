@@ -34,7 +34,7 @@ console.log("building exclusion list...");
 
 const exclusions = new Set(components);
 
-fs.readdirSync("src").forEach((key) => {
+fs.readdirSync("src/overrides").forEach((key) => {
   if (
     key.endsWith(".ml") ||
     key.endsWith(".mli") ||

@@ -7,8 +7,8 @@ module Compat = ReactNative.SafeAreaView
 @react.component @module("react-native")
 external make: (
   ~ref: ref=?,
-  ~accessibilityElementsHidden: // SafeAreaView props
-  bool=?,
+  // SafeAreaView props
+  ~accessibilityElementsHidden: bool=?,
   ~accessibilityHint: string=?,
   ~accessibilityIgnoresInvertColors: bool=?,
   ~accessibilityLabel: string=?,
@@ -34,8 +34,8 @@ external make: (
   ~onAccessibilityTap: unit => unit=?,
   ~onLayout: Event.layoutEvent => unit=?,
   ~onMagicTap: unit => unit=?,
-  ~onMoveShouldSetResponder: // Gesture Responder props
-  Event.pressEvent => bool=?,
+  // Gesture Responder props
+  ~onMoveShouldSetResponder: Event.pressEvent => bool=?,
   ~onMoveShouldSetResponderCapture: Event.pressEvent => bool=?,
   ~onResponderEnd: Event.pressEvent => unit=?,
   ~onResponderGrant: Event.pressEvent => unit=?,

@@ -7,8 +7,8 @@ module Compat = ReactNative.Image
 @react.component @module("react-native")
 external make: (
   ~ref: ref=?,
-  ~accessibilityLabel: // Image props
-  string=?,
+  // Image props
+  ~accessibilityLabel: string=?,
   ~accessible: bool=?,
   ~blurRadius: float=?,
   ~capInsets: View.edgeInsets=?,
@@ -24,8 +24,39 @@ external make: (
   ~onProgress: progressEvent => unit=?,
   ~progressiveRenderingEnabled: bool=?,
   ~resizeMethod: resizeMethod=?,
-  ~resizeMode: ReactNative.Style.resizeMode=?,
+  ~resizeMode: Style.resizeMode=?,
   ~source: Source.t,
   ~style: Style2.t<[< Style2.imageStyle]>=?,
   ~testID: string=?,
 ) => React.element = "Image"
+
+type sizeError
+
+@module("react-native") @scope("Image")
+external getSize: (
+  ~uri: string,
+  ~success: (~width: float, ~height: float) => unit,
+  ~failure: sizeError => unit=?,
+  unit,
+) => unit = "getSize"
+
+type requestId
+
+@module("react-native") @scope("Image")
+external prefetch: (~uri: string) => requestId = "prefetch"
+
+@module("react-native") @scope("Image")
+external abortPrefetch: requestId => unit = "abortPrefetch"
+
+@module("react-native") @scope("Image")
+external queryCache: (~uris: array<string>) => unit = "queryCache"
+
+type asset = {
+  uri: string,
+  width: float,
+  height: float,
+}
+
+@module("react-native") @scope("Image")
+external resolveAssetSource: Source.t => asset = "resolveAssetSource"
+

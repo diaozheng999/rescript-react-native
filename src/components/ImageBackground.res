@@ -7,11 +7,11 @@ module Compat = ReactNative.ImageBackground
 @react.component @module("react-native")
 external make: (
   ~ref: ref=?,
-  ~imageRef: // ImageBackground props
-  Image.ref=?,
+  // ImageBackground props
+  ~imageRef: Image.ref=?,
   ~imageStyle: Style2.t<[< Style2.imageStyle]>=?,
-  ~accessibilityLabel: // Image props
-  string=?,
+  // Image props
+  ~accessibilityLabel: string=?,
   ~accessible: bool=?,
   ~blurRadius: float=?,
   ~capInsets: View.edgeInsets=?,
@@ -27,7 +27,7 @@ external make: (
   ~onProgress: Image.progressEvent => unit=?,
   ~progressiveRenderingEnabled: bool=?,
   ~resizeMethod: Image.resizeMethod=?,
-  ~resizeMode: ReactNative.Style.resizeMode=?,
+  ~resizeMode: Style.resizeMode=?,
   ~source: Image.Source.t,
   ~style: Style2.t<[< Style2.viewStyle]>=?,
   ~testID: string=?,

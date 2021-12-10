@@ -23,14 +23,6 @@ const style_map = {
     style: "viewStyle",
   },
   MaskedViewIOS: "viewStyle",
-  Picker: {
-    itemStyle: "textStyle",
-    style: "textStyle",
-  },
-  PickerIOS: {
-    itemStyle: "textStyle",
-    style: "textStyle",
-  },
   Pressable: "__inline:interactionState => Style2.t<[< Style2.viewStyle]>",
   ProgressBarAndroid: "viewStyle",
   ProgressViewIOS: "viewStyle",

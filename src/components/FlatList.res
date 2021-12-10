@@ -7,26 +7,26 @@ module Compat = ReactNative.FlatList
 @react.component @module("react-native")
 external make: (
   ~ref: ref=?,
-  ~_ItemSeparatorComponent: // FlatList props
-  React.component<separatorComponentProps<'item>>=?,
+  // FlatList props
+  ~_ItemSeparatorComponent: React.component<separatorComponentProps<'item>>=?,
   ~columnWrapperStyle: Style2.t<[< Style2.viewStyle]>=?,
   ~data: array<'item>,
   ~getItemLayout: (array<'item>, int) => VirtualizedList.itemLayout=?,
   ~numColumns: 'int=?,
-  ~_ListEmptyComponent: // VirtualizedList props
+  // VirtualizedList props
   // ~_CellRendererComponent: VirtualizedList.cellRendererComponent('item)=?,
-  unit => React.element=?,
+  ~_ListEmptyComponent: unit => React.element=?,
   ~_ListFooterComponent: unit => React.element=?,
   ~_ListFooterComponentStyle: Style2.t<[< Style2.viewStyle]>=?,
   ~_ListHeaderComponent: unit => React.element=?,
   ~_ListHeaderComponentStyle: Style2.t<[< Style2.viewStyle]>=?,
   ~debug: bool=?,
-  ~disableVirtualization: // ~data: 'data, // any collection of 'item
-  bool=?, // deprecated
+  // ~data: 'data, // any collection of 'item
+  ~disableVirtualization: bool=?, // deprecated
   ~extraData: 'extraData=?,
-  ~initialNumToRender: // ~getItem: ('data, int) => 'item=?,
+  // ~getItem: ('data, int) => 'item=?,
   // ~getItemCount: 'data => int=?,
-  // ~getItemLayout: ('data, int) => VirtualizedList.itemLayout=?,
+  ~initialNumToRender: // ~getItemLayout: ('data, int) => VirtualizedList.itemLayout=?,
   int=?,
   ~initialScrollIndex: int=?,
   ~inverted: bool=?,
@@ -45,8 +45,8 @@ external make: (
   ~viewabilityConfig: VirtualizedList.viewabilityConfig=?,
   ~viewabilityConfigCallbackPairs: VirtualizedList.viewabilityConfigCallbackPairs<'item>=?,
   ~windowSize: int=?,
-  ~alwaysBounceHorizontal: // ScrollView props
-  bool=?,
+  // ScrollView props
+  ~alwaysBounceHorizontal: bool=?,
   ~alwaysBounceVertical: bool=?,
   ~automaticallyAdjustContentInsets: bool=?,
   ~bounces: bool=?,
@@ -96,10 +96,11 @@ external make: (
   ~snapToInterval: float=?,
   ~snapToOffsets: array<float>=?,
   ~snapToStart: bool=?,
+  ~stickyHeaderHiddenOnScroll: bool=?,
   ~stickyHeaderIndices: array<int>=?,
   ~zoomScale: float=?,
-  ~accessibilityActions: // View props 0.63.0
-  array<Accessibility.actionInfo>=?,
+  // rescript-react-native 0.64 || 0.65 || 0.66 View props
+  ~accessibilityActions: array<Accessibility.actionInfo>=?,
   ~accessibilityElementsHidden: bool=?,
   ~accessibilityHint: string=?,
   ~accessibilityIgnoresInvertColors: bool=?,
@@ -126,8 +127,8 @@ external make: (
   ~onAccessibilityTap: unit => unit=?,
   ~onLayout: Event.layoutEvent => unit=?,
   ~onMagicTap: unit => unit=?,
-  ~onMoveShouldSetResponder: // Gesture Responder props
-  Event.pressEvent => bool=?,
+  // Gesture Responder props
+  ~onMoveShouldSetResponder: Event.pressEvent => bool=?,
   ~onMoveShouldSetResponderCapture: Event.pressEvent => bool=?,
   ~onResponderEnd: Event.pressEvent => unit=?,
   ~onResponderGrant: Event.pressEvent => unit=?,
@@ -152,8 +153,10 @@ external make: (
   ~style: Style2.t<[< Style2.viewStyle]>=?,
   ~testID: string=?,
   ~children: React.element=?,
-  ~onMouseDown: // React Native Web Props
-  ReactEvent.Mouse.t => unit=?,
+  // react-native-web 0.16 View props
+  ~href: string=?,
+  ~hrefAttrs: Web.hrefAttrs=?,
+  ~onMouseDown: ReactEvent.Mouse.t => unit=?,
   ~onMouseEnter: ReactEvent.Mouse.t => unit=?,
   ~onMouseLeave: ReactEvent.Mouse.t => unit=?,
   ~onMouseMove: ReactEvent.Mouse.t => unit=?,

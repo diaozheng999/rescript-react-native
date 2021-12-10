@@ -113,3 +113,16 @@ module StyleCompat = ReactNative.Style
 module StyleUnsafe = Style
 module Style = Style2
 module StyleSheet = StyleSheet
+
+(** Additional Quality-of-life changes *)
+
+module Deps = Deps
+
+module Hook = struct
+  include HookWithDeps
+end
+
+external requireNativeComponent : string -> 'a = "requireNativeComponent"
+  [@@bs.module "react-native"]
+
+external inDevMode : bool = "__DEV__" [@@bs.val]
