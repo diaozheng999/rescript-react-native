@@ -24,7 +24,7 @@ external make: (
   ~accessibilityViewIsModal: bool=?,
   ~accessible: bool=?,
   ~collapsable: bool=?,
-  ~hitSlop: View.edgeInsets=?,
+  ~hitSlop: edgeInsets=?,
   ~importantForAccessibility: @string
   [
     | #auto

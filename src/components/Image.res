@@ -29,34 +29,3 @@ external make: (
   ~style: Style2.t<[< Style2.imageStyle]>=?,
   ~testID: string=?,
 ) => React.element = "Image"
-
-type sizeError
-
-@module("react-native") @scope("Image")
-external getSize: (
-  ~uri: string,
-  ~success: (~width: float, ~height: float) => unit,
-  ~failure: sizeError => unit=?,
-  unit,
-) => unit = "getSize"
-
-type requestId
-
-@module("react-native") @scope("Image")
-external prefetch: (~uri: string) => requestId = "prefetch"
-
-@module("react-native") @scope("Image")
-external abortPrefetch: requestId => unit = "abortPrefetch"
-
-@module("react-native") @scope("Image")
-external queryCache: (~uris: array<string>) => unit = "queryCache"
-
-type asset = {
-  uri: string,
-  width: float,
-  height: float,
-}
-
-@module("react-native") @scope("Image")
-external resolveAssetSource: Source.t => asset = "resolveAssetSource"
-

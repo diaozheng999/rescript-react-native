@@ -4,7 +4,7 @@
     "name": "Diao Zheng"
   },
   "description": "Quality-of-life improvements to ReScript React Native bindings.",
-  "version": "0.64.7",
+  "version": "0.66.2",
   "license": "MIT",
   "repository": "github:diaozheng999/rescript-react-native",
   "scripts": {
